@@ -1,0 +1,1 @@
+# fujimichokai-registration
