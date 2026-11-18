@@ -137,30 +137,7 @@
 }
 
 message.textContent =
-  "LINE認証テストの準備ができました。";
-
-try {
-  const authResponse = await fetch(
-    "https://fujimichokai-line-auth-test.fujimichokai70.workers.dev/",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ idToken: token })
-    }
-  );
-
-  const authResult = await authResponse.json();
-
-  message.textContent =
-    authResult.success === true
-      ? "LINE認証テスト成功"
-      : "LINE認証テスト失敗";
-
-} catch (authError) {
-  message.textContent = "LINE認証テスト通信エラー";
-}
+  "LINE認証情報を取得しました。";
         
       } catch (error) {
         message.textContent =
